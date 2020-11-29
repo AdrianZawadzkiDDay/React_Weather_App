@@ -1,4 +1,5 @@
 import React from "react";
+import "./Result.css";
 
 const Result = props => {
   const {city, err, temp, sunrise, sunset, pressure, wind, date} = props.weather
@@ -19,7 +20,6 @@ const Result = props => {
         <h4>Zachód słońca: {sunsetTime}</h4>
         <h4>Ciśnienie: {pressure} hPa</h4>
         <h4>Wiatr: {wind} m/s</h4>
-
       </div>
     )
   }

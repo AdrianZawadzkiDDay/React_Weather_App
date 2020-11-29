@@ -62,8 +62,8 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
-        Aplikacja pogodowa
+      <div className="App">
+        <h3 className="header">Aplikacja pogodowa</h3>
         <Form
          value={this.state.value} 
          change={this.handleInputChange}
