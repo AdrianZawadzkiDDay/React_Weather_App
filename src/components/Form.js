@@ -2,8 +2,13 @@ import React from "react";
 
 const Form = (props) => {
   return (
-    <form>
-      <input type="text" value={props.value} placeholder="wpisz miasto" />
+    <form onSubmit={props.submit}>
+      <input
+        type="text"
+        value={props.value}
+        onChange={props.change}
+        placeholder="wpisz miasto"
+      />
       <button type="submit">Wyszukaj miasta</button>
     </form>
   );
