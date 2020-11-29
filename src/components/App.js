@@ -19,8 +19,6 @@ class App extends React.Component {
     err: ''
   };
 
-  // 5f5bc434b19388d376011cbda820fc7d
-
   handleInputChange = e => {
     this.setState({
       value: e.target.value,
@@ -45,11 +43,11 @@ class App extends React.Component {
       this.setState(prevState => ({
         date: time,
         city: prevState.value,
-        sunrise: data.sys.susnrise,
+        sunrise: data.sys.sunrise,
         sunset: data.sys.sunset,
         temp: data.main.temp,
         pressure: data.main.pressure,
-        wind: data.wind,
+        wind: data.wind.speed,
         err: false
       }))
     })
@@ -57,11 +55,12 @@ class App extends React.Component {
       console.log(err)})
       this.setState(state => ({
         err: true,
-        city: this.state.value
+        city: state.value
       }))
   }
 
   render() {
+
     return (
       <div>
         Aplikacja pogodowa
